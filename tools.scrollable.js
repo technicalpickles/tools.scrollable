@@ -282,25 +282,33 @@
 		}  
 		
 		// prev button		
-		prev.addClass(conf.disabledClass).click(function() { 
+		prev.addClass(conf.disabledClass).click(function(e) { 
+                        e.preventDefault();
 			self.prev(); 
+                        return false;
 		});
 		
 
 		// next button
-		next.click(function() { 
+		next.click(function(e) { 
+                        e.preventDefault();
 			self.next(); 
+                        return false;
 		});
 		
 		// prev page button
-		nextPage.click(function() { 
+		nextPage.click(function(e) { 
+                        e.preventDefault();
 			self.nextPage(); 
+                        return false;
 		});
 		
 
 		// next page button
-		prevPage.addClass(conf.disabledClass).click(function() { 
+		prevPage.addClass(conf.disabledClass).click(function(e) { 
+                        e.preventDefault();
 			self.prevPage(); 
+                        return false;
 		});		
 
 		
